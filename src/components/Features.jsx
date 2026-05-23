@@ -16,7 +16,7 @@ export default function Features({ setModalType }) {
     {
       title: 'Deterministic Treasury AI',
       metric: '98.7% Forecast Accuracy',
-      spec: 'Our GPT-4o powered cashflow engine contextually parses invoice metadata, counterparty risk histories, and multi-currency ledgers with zero hallucination bounds.',
+      spec: 'Our AI powered cashflow engine contextually parses invoice metadata, counterparty risk histories, and multi-currency ledgers with zero hallucination bounds.',
       stats: [
         { label: 'Analysis Speed', value: '< 800ms' },
         { label: 'Context Length', value: '128k Tokens' },
