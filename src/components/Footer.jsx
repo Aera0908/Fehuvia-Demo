@@ -49,8 +49,12 @@ export default function Footer({ onPageSelect }) {
         <div className="flex flex-col space-y-4">
           <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#e4c37a]/80">Corporate</h4>
           <div className="flex flex-col space-y-2.5 text-xs text-white/55 font-light">
-            <a href="#" onClick={(e) => handleLinkClick(e, 'security-audit')} className="hover:text-[#e4c37a] transition-colors">Security Audit</a>
-            <a href="#" onClick={(e) => handleLinkClick(e, 'risk-parameters')} className="hover:text-[#e4c37a] transition-colors">Risk Parameters</a>
+            <button type="button" disabled className="cursor-not-allowed text-white/20 transition-colors text-left">
+              Security Audit
+            </button>
+            <button type="button" disabled className="cursor-not-allowed text-white/20 transition-colors text-left">
+              Risk Parameters
+            </button>
             <a href="#" onClick={(e) => handleLinkClick(e, 'terms-carriage')} className="hover:text-[#e4c37a] transition-colors">Terms of Carriage</a>
           </div>
         </div>

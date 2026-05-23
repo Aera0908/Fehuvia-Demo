@@ -82,8 +82,8 @@ export default function ContentReader({ activePage = 'core-concept', onClose, se
     {
       name: 'Corporate',
       items: [
-        { id: 'security-audit', title: 'Security Audit', icon: ShieldCheck },
-        { id: 'risk-parameters', title: 'Risk Parameters', icon: ShieldAlert },
+        { id: 'security-audit', title: 'Security Audit', icon: ShieldCheck, disabled: true },
+        { id: 'risk-parameters', title: 'Risk Parameters', icon: ShieldAlert, disabled: true },
         { id: 'terms-carriage', title: 'Terms of Carriage', icon: FileText },
       ]
     },
@@ -752,13 +752,17 @@ console.log('Cleared block:', receipt.blockNumber);`}
                           return (
                             <button
                               key={item.id}
+                              disabled={item.disabled}
                               onClick={() => {
+                                if (item.disabled) return;
                                 setActiveTab(item.id);
                                 setIsMobileNavOpen(false); // Auto-close drawer on click on mobile!
                               }}
                               className={`w-full flex items-center gap-2.5 px-3 py-2 rounded text-left text-xs uppercase tracking-wider transition-all ${isActive
                                   ? 'bg-[#e4c37a]/10 border border-[#e4c37a]/20 text-[#e4c37a] font-semibold'
-                                  : 'bg-transparent border border-transparent text-white/55 hover:bg-white/[0.02] hover:text-white font-light'
+                                  : item.disabled
+                                    ? 'bg-transparent border border-transparent text-white/20 font-light cursor-not-allowed'
+                                    : 'bg-transparent border border-transparent text-white/55 hover:bg-white/[0.02] hover:text-white font-light'
                                 }`}
                             >
                               <IconComponent className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#e4c37a]' : 'text-white/40'}`} />
