@@ -9,6 +9,7 @@ import AuthModal from './components/AuthModal';
 import DashboardLayout from './components/dashboard/DashboardLayout';
 import ContentReader from './components/ContentReader';
 import ArchitectureView from './components/ArchitectureView';
+import DemoDisclaimer from './components/DemoDisclaimer';
 
 function App() {
   // Navigation View Coordinator: 'landing', 'dashboard', 'reader', or 'architecture'
@@ -135,6 +136,8 @@ function App() {
         setModalType={setModalType}
         setView={setView}
       />
+
+      <DemoDisclaimer />
 
     </div>
   );

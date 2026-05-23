@@ -10,6 +10,7 @@ import { AnalyticsView } from './AnalyticsView';
 import { ProfileView } from './ProfileView';
 import { NotificationsView } from './NotificationsView';
 import { HelpView } from './HelpView';
+import DemoDisclaimer from '../DemoDisclaimer';
 import { Bell, User, HelpCircle, FileText, TrendingUp, Clock, X, Check, ShieldAlert, Sparkles, CreditCard } from 'lucide-react';
 
 export default function DashboardLayout({ setView }) {
@@ -700,6 +701,7 @@ export default function DashboardLayout({ setView }) {
         </div>
         
       </main>
+      <DemoDisclaimer />
     </div>
   );
 }
