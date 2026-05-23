@@ -701,7 +701,7 @@ export default function DashboardLayout({ setView }) {
         </div>
         
       </main>
-      <DemoDisclaimer />
+      <DemoDisclaimer compact />
     </div>
   );
 }
